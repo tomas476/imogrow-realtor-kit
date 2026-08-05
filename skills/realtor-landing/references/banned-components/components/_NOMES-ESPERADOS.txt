@@ -1,0 +1,80 @@
+FICHEIROS DE REFERENCIA ESPERADOS NESTA PASTA
+==============================================
+
+O list.txt aponta para os nomes abaixo. Guarda cada screenshot com o
+nome exacto indicado (PNG). Um nome em falta nao parte nada — a entrada
+do list.txt continua a fazer sentido pelo texto — mas com a imagem
+fica muito mais rapido de reconhecer.
+
+SECCAO 1 — PROVA SOCIAL EM CAPSULA
+  trusted-by-pill.png
+     Capsula branca com 5 estrelas amarelas e "Trusted by 20+
+     Innovative Clients". O componente mais banido de todos.
+  hero-eyebrow-pill.png
+     Etiqueta arredondada com "AI-NATIVE WORKFLOWS" por cima do
+     titulo do hero (print do site Lumina com anotacoes amarelas).
+  card-corner-badges.png
+     Cards azul/verde/laranja com "POPULAR", "NEW", "FEATURED" no
+     canto (do painel "Bad Contrast Choices").
+
+SECCAO 2 — ESTETICA IA / GAMER / VIDRO
+  liquid-glass-ai.png
+     Colagem "Your AI Glass Companion" / "Effortless Glass Morphism".
+  aurora-mesh-gradient.png
+     Cartao roxo-azul com "Mesh gradient animation".
+  purple-ai-palette.png
+     Print anotado "ai color palette: Purple/violet accent colors
+     detected".
+  neon-gamer-ai-banner.png
+     Banner azul neon "10 FREE AI WEBSITES That Feel Like Magic".
+  radial-spotlight-glow.png
+     Print do Lumina com a anotacao "decorative radial spotlight glow".
+  ai-sparkle-icons.png
+     Os tres azulejos roxos com estrelinha / setas (mesmo print dos
+     "Identical icon tiles" serve).
+
+SECCAO 3 — CARDS E LAYOUT
+  side-tab-border-card.png
+     Print anotado "Side-tab border" — card com barra roxa a esquerda,
+     "Performance insight".
+  identical-icon-tiles.png
+     Print anotado "Identical icon tiles" — Automate / Integrate /
+     Scale.
+  icon-tile-above-heading.png
+     Os tres cards bege "Lightning Fast / Enterprise Secure / Built to
+     Scale" com emoji em azulejo branco.
+  cardocalypse.png
+     Painel "Cardocalypse" da galeria de anti-padroes.
+  copy-paste-layouts.png
+     A galeria completa de anti-padroes (Side-Tab Cards, Cardocalypse,
+     Copy-Paste Layouts, Inter Everywhere, Massive Icons, Bad Contrast).
+  saturated-metric-cards.png
+     Os cartoes roxo/azul/verde/laranja/rosa com $2.4M, 48.2K, 8.7%.
+  3d-dashboard-mockup.png
+     Dashboard branco inclinado em perspetiva com graficos roxos.
+
+SECCAO 4 — TIPOGRAFIA
+  inter-everywhere.png
+     Painel "Inter Everywhere" da galeria, ou o print anotado
+     "overused font: Primary font: inter (61% of text)".
+  giant-serif-cta.png
+     "Ready to transform how your team builds?" em serif gigante sobre
+     fundo escuro com botao em capsula.
+  decorative-section-numbers.png
+     O "01" / "03" pequeno por cima dos titulos (prints do Lumina).
+  low-contrast-text.png
+     Print com as dezenas de anotacoes "low contrast text" sobre os
+     cartoes saturados.
+
+SECCAO 5 — BOTOES E NAVEGACAO
+  dual-pill-cta.png
+     Hero do Delibix: "Book Free Consultation" + "Our Journey".
+  floating-pill-navbar.png
+     Navbar flutuante do Delibix com os quatro botoes circulares a
+     direita. (Mesmo print do dual-pill-cta serve para os dois.)
+  arrow-in-everything.png
+     Qualquer print com setas → dentro dos botoes; o do Delibix serve.
+
+NOTA: varios nomes podem apontar para o MESMO screenshot recortado de
+maneira diferente. Se preferires, guarda o print inteiro uma vez e
+duplica-o com os dois nomes — e mais rapido do que recortar.

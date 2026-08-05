@@ -1,0 +1,390 @@
+========================================================================
+ELEMENTOS BANIDOS
+Lista de componentes, padroes visuais e tiques de design que NUNCA
+entram em sites ou plataformas que produzimos.
+========================================================================
+
+COMO USAR ESTE FICHEIRO
+-----------------------
+Este ficheiro e texto puro. Cada elemento banido tem uma referencia
+visual guardada em components/. Quando precisares de ver do que se
+trata, abre o caminho indicado na linha "REF:".
+
+Le esta lista ANTES de escrever a primeira linha de HTML ou CSS de
+qualquer site novo, e outra vez ANTES de entregar. Nao e uma lista de
+sugestoes. Se um elemento aparece aqui, nao vai para producao.
+
+Estrutura de cada entrada:
+  TITULO
+  REF:      caminho da imagem de referencia
+  O QUE E:  como reconhecer
+  PORQUE:   porque esta banido
+  EM VEZ:   o que fazemos no lugar
+
+
+REGRA DE OURO
+-------------
+Se um visitante conseguir olhar para o site e pensar "isto foi feito
+por IA" ou "ja vi este site cem vezes", falhamos. O objetivo nao e
+seguir tendencia — e nao ser reconhecivel como template.
+
+Tres testes rapidos antes de entregar:
+  1. TESTE DO SCREENSHOT. Tira print de uma seccao. Se pudesse ser de
+     qualquer outra empresa de qualquer outro setor, esta errado.
+  2. TESTE DA REPETICAO. Se duas seccoes seguidas tem a mesma estrutura
+     (titulo centrado + 3 cards), uma delas tem de mudar de forma.
+  3. TESTE DO PORQUE. Para cada efeito visual (glow, gradiente, blur,
+     borda colorida), tens de conseguir dizer que informacao ele
+     transmite. Se a resposta for "fica bonito", tira.
+
+
+========================================================================
+SECCAO 1 — O COMPONENTE MAIS BANIDO DE TODOS
+========================================================================
+
+1.1 A PILULA DE PROVA SOCIAL
+REF:      components/trusted-by-pill.png
+O QUE E:  Capsula branca, cantos totalmente redondos (border-radius
+          9999px), sombra suave, com estrelas amarelas e um texto curto
+          tipo "Trusted by 20+ Innovative Clients", "Empresa
+          Recomendada", "Most Wanted", "Mais Procurado", "#1 em
+          Portugal", "Rated 4.9/5". Aparece no topo do hero, por cima
+          do titulo, ou colada ao canto de um card.
+          Variantes igualmente banidas: a mesma pilula com um ponto
+          verde a pulsar, com "NEW", com um contador de utilizadores,
+          com avatares circulares sobrepostos.
+PORQUE:   E a assinatura numero um de site gerado por IA. Ocupa o
+          espaco mais valioso da pagina (acima do titulo) para dizer
+          uma coisa que ninguem le. Toda a gente a tem, portanto nao
+          diferencia ninguem.
+EM VEZ:   A INFORMACAO fica — a forma e que muda. "Trusted by",
+          numero de clientes, anos de experiencia, avaliacoes:
+          tudo isso e conteudo bom e queremos usar. Mas entra:
+            - como linha de texto simples por baixo do subtitulo,
+              sem caixa, sem borda, sem fundo;
+            - como faixa de logotipos reais de clientes;
+            - como numero grande e nu dentro do proprio texto
+              ("Ha 14 anos a vender casas em Leiria");
+            - como testemunho com nome, cara e contexto;
+            - numa seccao propria mais abaixo, nao no hero.
+          NUNCA dentro de uma capsula oval flutuante.
+
+1.2 O CHIP / EYEBROW NO TOPO DO HERO
+REF:      components/hero-eyebrow-pill.png
+O QUE E:  Irmao do anterior. Pequena etiqueta arredondada com borda
+          fina, texto em maiusculas e letter-spacing largo, tipo
+          "AI-NATIVE WORKFLOWS", por cima do titulo do hero.
+PORQUE:   Mesmo problema: e um componente decorativo que finge ser
+          informacao. Cria uma terceira hierarquia de texto no hero
+          que nao e precisa.
+EM VEZ:   Ou a frase e importante e faz parte do titulo, ou nao e
+          importante e desaparece. Se for mesmo necessario categorizar,
+          usa texto simples sem caixa.
+
+1.3 BADGES NO CANTO DOS CARDS
+REF:      components/card-corner-badges.png
+O QUE E:  "POPULAR", "NEW", "FEATURED", "MAIS PROCURADO", "RECOMENDADO"
+          em capsulas coloridas encostadas ao canto superior de cards.
+PORQUE:   Ruido. Quando tres cards tem tres badges diferentes, nenhum
+          se destaca. E quase sempre uma hierarquia inventada, nao real.
+EM VEZ:   Destaca o card que importa por peso visual — mais espaco,
+          fundo diferente, tamanho maior — ou nao destaques nenhum.
+
+
+========================================================================
+SECCAO 2 — ESTETICA "IA / GAMER / LIQUID GLASS"
+========================================================================
+
+2.1 GLASSMORPHISM / LIQUID GLASS DECORATIVO
+REF:      components/liquid-glass-ai.png
+O QUE E:  Paineis translucidos com backdrop-filter: blur(), borda
+          branca a 20% de opacidade, empilhados uns sobre os outros
+          por cima de um fundo colorido. Cartoes "de vidro" a flutuar
+          sobre gradientes cor-de-rosa e azuis.
+PORQUE:   Reduz contraste, mata a legibilidade, e neste momento e
+          sinonimo visual de "app de IA generica". Custa performance
+          (backdrop-filter e caro) para nao comunicar nada.
+EM VEZ:   Superficies solidas com hierarquia clara. Se precisas de
+          separar camadas, usa cor, espaco e sombra discreta.
+          EXCECAO UNICA: vidro so e aceitavel quando ha realmente
+          conteudo por tras que interessa ver (barra de navegacao
+          sobre conteudo em scroll), e mesmo ai com blur contido e
+          contraste de texto validado.
+
+2.2 AURORA / MESH GRADIENT ANIMADO
+REF:      components/aurora-mesh-gradient.png
+O QUE E:  Fundo com manchas de gradiente roxo-azul-rosa que se movem
+          lentamente. O fundo do OpenAI, Perplexity, Lovable, Bolt.
+PORQUE:   Foi original em 2022. Hoje e o wallpaper por defeito da
+          internet inteira. Quem chega ao site nao sabe se esta na
+          nossa pagina ou na de qualquer outra startup.
+EM VEZ:   Fundo solido com uma cor propria da marca. Se precisas de
+          movimento no fundo, tem de ser algo que so faz sentido
+          para ESTE cliente (as barras em gradiente do genero
+          imobiliario, video real, fotografia do espaco).
+
+2.3 PALETA ROXO / VIOLETA
+REF:      components/purple-ai-palette.png
+O QUE E:  #6366F1, #8B5CF6, #A855F7 e vizinhos. Roxo em botoes, roxo
+          em icones, roxo em gradientes, roxo em tudo.
+PORQUE:   E a cor por defeito de todas as ferramentas de geracao de
+          UI. Roxo indigo e literalmente o valor que sai quando
+          ninguem escolheu cor nenhuma.
+EM VEZ:   A cor do cliente. Se o cliente nao tem cor, escolhe uma e
+          justifica-a pelo setor. Um unico acento, usado com
+          disciplina. Roxo so entra se for mesmo a cor da marca.
+
+2.4 GLOW, NEON E BRILHO GAMER
+REF:      components/neon-gamer-ai-banner.png
+O QUE E:  Texto com contorno luminoso, azul eletrico sobre preto,
+          cerebros digitais, circuitos, particulas, coroas douradas,
+          reflexos, letras 3D com bisel, estilo thumbnail de YouTube.
+PORQUE:   Le-se como spam. Zero credibilidade profissional. Sinaliza
+          conteudo de baixa qualidade antes de alguem ler uma palavra.
+EM VEZ:   Tipografia forte e fotografia real. Se algo precisa de
+          destaque, destaca-se com escala e espaco, nao com luz.
+
+2.5 SPOTLIGHT / GLOW RADIAL DECORATIVO
+REF:      components/radial-spotlight-glow.png
+O QUE E:  Mancha radial mais clara atras do titulo do hero, como se
+          houvesse um projetor apontado ao texto.
+PORQUE:   Efeito puramente decorativo, presente em todos os templates,
+          e degrada o contraste do texto que devia estar a ajudar.
+EM VEZ:   Nada. O titulo destaca-se por ser o maior elemento da
+          pagina.
+
+2.6 SIMBOLOS DE "IA"
+REF:      components/ai-sparkle-icons.png
+O QUE E:  A estrelinha de quatro pontas (✦ / ✨), cerebros, robos,
+          nos de rede neuronal, varinhas magicas. Especialmente
+          dentro de botoes ou como icone de feature.
+PORQUE:   Datam o site imediatamente e nao explicam nada. Um icone
+          de estrelinha ao lado de "Automate" nao diz o que a coisa faz.
+EM VEZ:   Icones que descrevem literalmente a funcao, ou nenhum icone.
+
+
+========================================================================
+SECCAO 3 — CARDS E LAYOUT
+========================================================================
+
+3.1 SIDE-TAB CARD (BORDA COLORIDA NUM DOS LADOS)
+REF:      components/side-tab-border-card.png
+O QUE E:  Card de cantos arredondados com uma barra colorida grossa
+          encostada ao lado esquerdo.
+PORQUE:   E apontado como o unico tique mais reconhecivel de UI gerada
+          por IA. Nao tem funcao — a barra nao codifica estado,
+          categoria nem prioridade.
+EM VEZ:   Card liso. Se a barra tiver de existir, tem de significar
+          alguma coisa consistente em todo o site (ex: vermelho =
+          urgente) e essa chave tem de estar visivel algures.
+
+3.2 TRES CARDS IDENTICOS COM ICONE EM QUADRADO ARREDONDADO
+REF:      components/identical-icon-tiles.png
+O QUE E:  Grelha de 3 (ou 6) cards exatamente iguais. Cada um tem um
+          quadrado arredondado colorido no topo com um icone dentro,
+          um titulo de duas palavras e uma frase de tres. "Automate /
+          Move faster", "Integrate / Work smarter", "Scale / Grow
+          together".
+PORQUE:   E o layout por defeito de todas as ferramentas de geracao.
+          Alem disso o conteudo e sempre vazio — nao diz nada que o
+          cliente nao pudesse dizer.
+EM VEZ:   Se sao tres coisas de peso igual, considera uma lista, uma
+          tabela ou tres paragrafos. Se uma e mais importante, da-lhe
+          mais espaco e quebra a grelha. E acima de tudo: escreve
+          conteudo especifico do cliente, com numeros e nomes reais.
+
+3.3 ICONE EMPILHADO POR CIMA DO TITULO DO CARD
+REF:      components/icon-tile-above-heading.png
+O QUE E:  Icone (muitas vezes um emoji ⚡🔒📈) num azulejo branco,
+          centrado, com o titulo por baixo e o texto centrado a seguir.
+PORQUE:   Emoji como icone de produto e amador. Texto centrado em
+          paragrafos longos e dificil de ler. E a composicao e sempre
+          a mesma.
+EM VEZ:   Texto alinhado a esquerda. Icones de um set coerente e
+          profissional, ou nenhum. Emoji nunca.
+
+3.4 CARDOCALYPSE — CARDS DENTRO DE CARDS
+REF:      components/cardocalypse.png
+O QUE E:  Card com padding e sombra, que contem um card com padding e
+          sombra, que contem outro. Tres, quatro, cinco niveis.
+PORQUE:   Cada nivel rouba largura ao conteudo e nenhum acrescenta
+          significado. O olho perde a nocao do que agrupa o que.
+EM VEZ:   Maximo um nivel de card. Agrupa com espaco em branco e
+          titulos, nao com caixas dentro de caixas.
+
+3.5 COPY-PASTE LAYOUT (TODAS AS SECCOES IGUAIS)
+REF:      components/copy-paste-layouts.png
+O QUE E:  Hero centrado, depois metricas, depois features em grelha,
+          depois testemunhos em grelha, depois CTA centrado. Todas as
+          seccoes com titulo centrado + subtitulo centrado + grelha.
+PORQUE:   Quando tudo tem a mesma forma, nada se destaca e o site
+          torna-se impossivel de recordar.
+EM VEZ:   Varia o ritmo. Alterna full-bleed com conteudo estreito,
+          alinhamento a esquerda com centrado, imagem a sangrar com
+          texto puro. Cada seccao tem de ter uma forma reconhecivel.
+
+3.6 CARTOES DE METRICAS EM CORES SATURADAS
+REF:      components/saturated-metric-cards.png
+O QUE E:  Grelha de cartoes com fundos cheios em roxo, azul, verde,
+          laranja e rosa saturados, cada um com um numero grande em
+          branco e uma etiqueta pequena por cima.
+PORQUE:   As cores nao codificam nada (porque e que "Active Users" e
+          azul e "NPS" e rosa?) e o texto pequeno sobre fundo saturado
+          falha contraste sistematicamente.
+EM VEZ:   Fundo neutro, numero grande, etiqueta legivel. A cor entra
+          so onde significa alguma coisa (variacao positiva/negativa).
+
+3.7 MOCKUP DE DASHBOARD EM PERSPETIVA 3D
+REF:      components/3d-dashboard-mockup.png
+O QUE E:  Screenshot de dashboard inclinado em perspetiva, a flutuar
+          com sombra, muitas vezes com graficos falsos.
+PORQUE:   Dados inventados a fingir que sao reais, e a perspetiva
+          torna a interface ilegivel. Nao prova nada.
+EM VEZ:   Screenshot real, de frente, legivel. Ou uma fotografia do
+          trabalho verdadeiro do cliente.
+
+
+========================================================================
+SECCAO 4 — TIPOGRAFIA
+========================================================================
+
+4.1 INTER EM TODO O LADO
+REF:      components/inter-everywhere.png
+O QUE E:  Inter como fonte unica do site. Tambem: a dupla
+          "serif elegante para titulos + Inter para corpo" (Fraunces,
+          Playfair ou Instrument Serif + Inter) usada sem razao.
+PORQUE:   Inter e a fonte por defeito de tudo. Nao esta errada — esta
+          gasta. A dupla serif+Inter tornou-se ela propria um template.
+EM VEZ:   Escolhe tipografia com intencao e justifica-a pelo setor e
+          pela marca. Se usares uma dupla, que a serif tenha carater
+          proprio e que a escolha se veja no resto do site (espaco,
+          escala, cor), nao so na fonte.
+
+4.2 TITULOS GIGANTES SEM CONTEUDO
+REF:      components/giant-serif-cta.png
+O QUE E:  "Ready to transform how your team builds?" a 80px, centrado,
+          com um botao em capsula por baixo. Frases tipo "transform",
+          "unlock the power of", "built for growth", "future-ready".
+PORQUE:   Escala grande a servir texto vazio. Quanto maior a letra,
+          mais evidente fica que nao diz nada.
+EM VEZ:   Escreve a frase primeiro. Se a frase for especifica e
+          verdadeira, pode ser grande. Se for enchimento, corta a
+          seccao inteira.
+
+4.3 NUMERACAO DECORATIVA DE SECCOES
+REF:      components/decorative-section-numbers.png
+O QUE E:  "01", "02", "03" em pequeno, com letter-spacing largo, por
+          cima de cada titulo de seccao.
+PORQUE:   Numera coisas que nao sao uma sequencia. Ninguem vai ler a
+          seccao 02 por ser a segunda.
+EM VEZ:   So numeras quando ha mesmo ordem (um processo, passos).
+
+4.4 TEXTO DE BAIXO CONTRASTE
+REF:      components/low-contrast-text.png
+O QUE E:  Cinzento claro sobre branco, cinzento medio sobre cinzento
+          claro, branco a 60% sobre cor saturada.
+PORQUE:   E inacessivel e le-se mal em ecra de portatil ao sol. Falha
+          WCAG e falha o utilizador.
+EM VEZ:   4.5:1 minimo para texto corrido, 3:1 para texto grande.
+          Verificar, nao adivinhar.
+
+
+========================================================================
+SECCAO 5 — BOTOES E NAVEGACAO
+========================================================================
+
+5.1 PAR DE BOTOES EM CAPSULA "PRIMARIO + FANTASMA"
+REF:      components/dual-pill-cta.png
+O QUE E:  Dois botoes lado a lado no hero, ambos totalmente
+          arredondados: um cheio a cor de marca com uma seta →, outro
+          branco com borda. "Book Free Consultation" + "Our Journey".
+PORQUE:   Duas accoes com peso quase igual significa que ninguem
+          decidiu qual e a accao principal. E a seta dentro do botao
+          e decoracao.
+EM VEZ:   Uma accao principal, clara, com verbo concreto do negocio
+          ("Marcar visita", "Pedir avaliacao gratuita"). A secundaria
+          e uma ligacao de texto, nao um segundo botao.
+
+5.2 NAVBAR FLUTUANTE EM CAPSULA COM ICONES CIRCULARES
+REF:      components/floating-pill-navbar.png
+O QUE E:  Barra de navegacao a flutuar, totalmente arredondada, com
+          sombra, e um grupo de botoes circulares a direita (lupa,
+          idioma, modo escuro, menu) mesmo em desktop.
+PORQUE:   Icones sem etiqueta que ninguem identifica, e a capsula
+          flutuante e outro tique de template.
+NOTA:     ATENCAO — no genero imobiliario a navbar em pilula fixa E
+          parte do nosso sistema e esta correta. O que esta banido e
+          a versao generica com a fila de botoes circulares
+          decorativos. Mantem a pilula, corta os circulos sem funcao.
+EM VEZ:   Navegacao com palavras. Icone so quando e universalmente
+          reconhecido e mesmo assim com etiqueta acessivel.
+
+5.3 SETAS DECORATIVAS DENTRO DE TUDO
+REF:      components/arrow-in-everything.png
+O QUE E:  → ou ↗ dentro de cada botao, cada link, cada card.
+PORQUE:   Quando tudo tem seta, a seta deixa de indicar direccao.
+EM VEZ:   Seta so quando indica navegacao real e nao obvia.
+
+
+========================================================================
+SECCAO 6 — CONTEUDO E COPY BANIDOS
+========================================================================
+
+6.1 NUMEROS INVENTADOS
+   "500+ Projetos", "99% Satisfacao", "10K+ Utilizadores", "24/7".
+   So entram numeros verdadeiros, dados pelo cliente. Se nao houver
+   numero real, a seccao de metricas nao existe.
+
+6.2 VOCABULARIO DE TEMPLATE
+   Banido: transform, unlock, empower, seamless, cutting-edge,
+   revolutionary, game-changing, elevate, supercharge, "built for
+   modern teams", "solucoes inovadoras", "parceiro estrategico",
+   "à medida das suas necessidades", "excelencia".
+   Regra: se a frase serve para uma clinica, um stand de carros e uma
+   startup de IA ao mesmo tempo, nao serve para nenhum.
+
+6.3 TESTEMUNHOS SEM CARA E SEM NOME
+   "Cliente satisfeito", "J. S., Lisboa", avatar generico.
+   So entram testemunhos com nome completo, foto real e contexto.
+   Sem isso, nao ha seccao de testemunhos.
+
+6.4 LOGOTIPOS DE CLIENTES FALSOS
+   Faixa de logos cinzentos de empresas que nunca foram clientes.
+   Nunca. Melhor nao ter faixa nenhuma.
+
+6.5 "WHY CHOOSE US"
+   Titulo banido, e a seccao que costuma vir por baixo tambem.
+   Diz o que fazes e por quanto. Deixa o visitante concluir.
+
+
+========================================================================
+SECCAO 7 — CHECKLIST DE ENTREGA
+========================================================================
+
+Antes de mostrar seja o que for ao cliente, percorre isto:
+
+[ ] Nao ha nenhuma capsula/pilula com prova social no topo
+[ ] Nao ha badges "popular"/"recomendado" em cantos de cards
+[ ] Nao ha borda colorida encostada ao lado de nenhum card
+[ ] Nao ha gradiente aurora/mesh nem glassmorphism decorativo
+[ ] Nao ha roxo/violeta (excepto se for a cor da marca)
+[ ] Nao ha estrelinhas ✦, cerebros, robos nem emoji como icones
+[ ] Nao ha tres cards identicos com icone em azulejo arredondado
+[ ] Nao ha cards dentro de cards
+[ ] Duas seccoes seguidas nao tem a mesma forma
+[ ] A fonte foi escolhida com uma razao que consigo dizer em voz alta
+[ ] Todos os numeros do site sao verdadeiros
+[ ] Todos os testemunhos tem nome e cara reais
+[ ] Contraste de texto verificado, nao adivinhado
+[ ] Ha UMA accao principal obvia no hero
+[ ] Retirei todos os efeitos que nao consigo justificar
+
+Se algum falhar, nao esta pronto.
+
+
+========================================================================
+NOTA FINAL
+========================================================================
+Esta lista cresce. Sempre que aparecer um novo tique de template,
+guarda o screenshot em components/ e acrescenta a entrada aqui com o
+mesmo formato. O ficheiro so vale se estiver atualizado.

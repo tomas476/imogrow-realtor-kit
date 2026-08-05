@@ -39,6 +39,10 @@ alguém abre o site sem andar à procura de um imóvel específico.
 9. **Cada site novo muda paleta, par tipográfico e um ou dois mecanismos de assinatura.** A
    estrutura, as medidas e o movimento mantêm-se; a assinatura visual não. Um site novo com o
    par tipográfico de um anterior lê-se como template. Isto não é sugestão.
+10. **Nada da lista de elementos banidos entra no site.** `references/banned-components/list.txt`
+   é leitura obrigatória antes da primeira linha de HTML e outra vez antes de entregar. Atenção
+   ao caso especial: a navbar em pílula deste género está correcta e não é abrangida — o que
+   está banido é a variante genérica com fila de botões circulares decorativos (§5.2 da lista).
 
 ---
 
@@ -57,7 +61,7 @@ cliente não confirme fica vazio e a secção correspondente não se constrói.
 Decidir aqui o mapa de páginas: núcleo de 8 (`sections.md` §1.1) e, só com os limiares
 cumpridos, as extras de equipa (`imoveis.html` com ≥6 imóveis, `equipa.html` com ≥4 pessoas,
 `premios.html` com distinções verificáveis).
-**Lê:** `references/sections.md` §1.
+**Lê:** `references/sections.md` §1 + `references/banned-components/list.txt` inteiro.
 
 ### Fase 1 — Paleta e tipografia
 Escolher `--bg`, `--ink`, `--muted`, `--faint`, `--accent`, `--accent-2`, `--line` e o par
@@ -102,7 +106,8 @@ Favicons: os cinco ficheiros. `theme-color` igual a `--bg`.
 ### Fase 6 — Auditoria
 Percorrer a checklist de entrega abaixo, com o site já no domínio final. Procurar `{{` em
 todos os ficheiros. Testar teclado, reduced-motion, JS desligado, telemóvel real. Correr
-Lighthouse. Só depois disto se fala em entrega.
+Lighthouse. Correr também a checklist da §7 de `references/banned-components/list.txt` — as
+quinze caixas, uma a uma. Só depois disto se fala em entrega.
 
 ### Fase 7 — Deploy
 Subir a pasta. Se o domínio definitivo mudou desde a fase 5, **voltar aos metas** e trocar
@@ -116,6 +121,8 @@ LinkedIn Post Inspector. Testar a partilha num telemóvel que nunca recebeu o li
 
 | Quero… | Leio |
 |---|---|
+| saber o que nunca pode entrar no site, e o que fazer em vez disso | `references/banned-components/list.txt` |
+| a checklist final de elementos banidos antes de entregar | `references/banned-components/list.txt` §7 |
 | escolher/trocar a paleta, as fontes, os raios, o espaçamento | `references/design-system.md` |
 | a receita do vidro, ou desligar o blur em telemóvel | `references/design-system.md` §5 |
 | perceber a regra de ouro dos traços e das cápsulas | `references/design-system.md` §7 |
